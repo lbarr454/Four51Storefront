@@ -8,10 +8,11 @@
         <loadingindicator ng-show="couponLoadingIndicator" title="{{'Please wait while we verify and apply your promotion code' | r | xlat}}" />
         <loadingindicator ng-show="couponRemoveIndicator" title="{{'Please wait while we remove your promotion code' | r | xlat}}" />
         <orderconfirmationmessage />
-        <p>
+       <--! <p>
             <span class="text-info">{{'Items' | r | xlat}}</span>
             <span class="pull-right">{{currentOrder.LineItems.length}}</span>
-        </p>
+        </p> -->
+           <checkoutitemsummary></checkoutitemsummary>
         <p ng-if="!(user.Permissions.contains('HidePricing'))">
             <span class="text-info">{{'Subtotal' | r | xlat}}</span>
             <span class="pull-right">{{currentOrder.Subtotal | culturecurrency}}</span>
